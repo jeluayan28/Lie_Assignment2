@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Video</title>
+  <style>
+    /* Apply background color to the entire page */
+    body {
+      background-color: #FFF1DB; /* Set background color */
+      margin: 0; /* Remove default margin */
+      font-family: Arial, sans-serif; /* Set a default font */
+    }
+
+    /* Style the video container */
+    #video-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Style the video frame */
+    #video-frame {
+      padding: 10px; /* Add some space between the video and the frame */
+      border: 5px solid #FFC0CB; /* Cute pink border */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slight shadow for a soft look */
+      background-color: #FFF; /* White background for the frame */
+    }
+
+    /* Adjust the width of the video */
+    #bidyow-video {
+      width: 80%; /* Set the video to a fixed smaller width */
+      height: auto; /* Keep the height proportional to the width */
+      margin-left: 120px;
+    }
+
+    /* Style the Go Back button */
+    #go-back-button {
+      position: fixed; /* Ensure it's positioned correctly */
+      top: 60px; /* Adjust position from the top */
+      left: 30px; /* Adjust position from the left */
+      width: 100px; /* Increase width to make the button larger */
+      height: 60px; /* Increase height to make the button larger */
+      background: transparent url('img/back.gif') no-repeat center center; /* Use the GIF as the background */
+      background-size: contain; /* Resize the image to fit within the button container */
+      border: none;
+      cursor: pointer;
+    }
+
+    #go-back-button:hover {
+      transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+
+    /* Style the Next button */
+    #next {
+      position: fixed; /* Ensure it's positioned correctly */
+      top: 60px; /* Adjust position from the top */
+      right: 30px; /* Adjust position from the right */
+      width: 100px; /* Increase width to make the button larger */
+      height: 60px; /* Increase height to make the button larger */
+      background: transparent url('img/next.png') no-repeat center center; /* Use the GIF as the background */
+      background-size: contain; /* Resize the image to fit within the button container */
+      border: none;
+      cursor: pointer;
+    }
+
+    #next:hover {
+      transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Video Content -->
+  <div id="video-container">
+    <div id="video-frame">
+      <video id="bidyow-video" controls>
+        <source src="vid/bidyow.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <button id="go-back-button"></button> <!-- Add the Go Back button here -->
+  </div>
+
+  <!-- Next Button -->
+  <div id="text-container">
+    <button id="next"></button> <!-- Add the Next button here -->
+  </div>
+
+  <script>
+    // Event listener for the "Go Back" button
+    document.getElementById('go-back-button').addEventListener('click', function() {
+      // Redirect back to the main page (index.html)
+      window.location.href = 'index.html'; // Adjust this to your main page's filename
+    });
+
+    // Event listener for the "Next" button
+    document.getElementById('next').addEventListener('click', function() {
+      // Redirect to the next page (text.html)
+      window.location.href = 'text.html'; // Adjust this to your next page's filename
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIE_A2_Animated</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-area">
+    <div class="chrome-window">
+      <div class="navbar">
+        <img src="img/logo.png" alt="Logo" class="logo"> <!-- Logo in navbar -->
+        <img src="img/dnd.gif" alt="Do Not Disturb" class="dnd-img"> <!-- Do Not Disturb icon -->
+        <div class="dnd-world-container">
+          <img src="img/b1.png" alt="color2"> 
+          <img src="img/b2.png" alt="color1"> 
+        </div>
+      </div>
+
+      <!-- Curtains, Timer, and Alert Section -->
+      <div id="curtain-left" class="curtain-module curtain"></div>
+      <div id="curtain-right" class="curtain-module curtain"></div>
+
+      <div id="welcome-message" class="curtain-module welcome-modal">
+        <div class="welcome-content">
+          <p>You are given 30 seconds to wake the pillow!</p>
+          <button id="start-game-button">Start</button>
+        </div>
+      </div>
+
+        <div id="timer" class="curtain-module">30</div>
+
+      <!-- Hidden alert modal -->
+      <div id="alert-message" class="curtain-module alert-modal">
+        <div class="alert-content">
+          <p>Oops! You did not wake the pillow. Start again?</p>
+          <button id="restart-button">Start Again</button>
+        </div>
+      </div>
+
+      <div id="custom-alert" class="modal">
+        <div class="modal-content">
+          <p>Oops! You did not wake the pillow. Start again?</p>
+          <button id="confirm-button">Start Again</button>
+        </div>
+      </div>
+      
+      <!-- Sleeping Character with 'Do Not Disturb' sign -->
+      <div class="sleeping-character">
+        <div class="do-not-disturb"></div>
+        
+        <div class="face">
+          <div class="eye left-eye"></div>
+          <div class="eye right-eye"></div>
+          <div class="mouth"></div>
+          <div class="zzz">zzz</div>
+        </div>
+      </div>
+
+      <!-- Sunlight effect -->
+      <div id="sunlight"></div>
+
+      <!-- Side Menu for Interactions -->
+      <div class="menu">
+        <div class="menu-item">
+          <button id="fling-things"></button>
+          <p class="menu-text">Fling Things</p>
+        </div>
+        <div class="menu-item">
+          <button id="sounds"></button>
+          <p class="menu-text">Alarm Sounds</p>
+        </div>
+        <div class="menu-item">
+          <button id="bug-it"></button>
+          <p class="menu-text">Bug It</p>
+        </div>
+        <div class="menu-item">
+          <button id="open-curtains"></button>
+          <p class="menu-text">Open the Curtains</p>
+        </div>
+        <div class="menu-item">
+          <button id="watch-this" class="watch-this-folder"></button>
+          <p class="menu-text">Watch This</p>
+        </div>
+      </div>
+
+      <script>
+        // Event listener for the "Watch This" button
+        document.getElementById('watch-this').addEventListener('click', function() {
+          // Redirect to video.html when the "Watch This" button is clicked
+          window.location.href = 'video.html';
+        });
+      </script>
+
+      <script src="script.js"></script>
+      <script src="fling_f.js"></script>
+      <script src="curtain_timer.js"></script>
+      <script src="bugs_f.js"></script>
+      <script src="alarm_sounds_f.js"></script>
+      <script src="video.js"></script>
+
+    </div>
+  </div>
+</body>
+</html>

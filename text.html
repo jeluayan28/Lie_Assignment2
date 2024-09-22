@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Sleep Is Important</title>
+  <style>
+    @font-face {
+      font-family: 'TextFont';
+      src: url('text-font.ttf'); /* Adjust the path to your font file */
+    }
+
+    @font-face {
+      font-family: 'CuteFont';
+      src: url('cute-font.ttf'); /* Adjust the path to your cute font file */
+    }
+
+    /* Apply background color to the entire page */
+    body {
+      background-color: #FFF1DB; /* Set background color */
+      margin: 0; /* Remove default margin */
+      font-family: 'TextFont', Arial, sans-serif; /* Use local font */
+      overflow: hidden; /* Prevent scrollbars from appearing */
+    }
+
+    /* Style the Go Back button */
+    #go-back-button {
+      position: fixed; /* Ensure it's positioned correctly */
+      top: 60px; /* Adjust position from the top */
+      left: 30px; /* Adjust position from the left */
+      width: 100px; /* Increase width to make the button larger */
+      height: 60px; /* Increase height to make the button larger */
+      background: transparent url('img/back.gif') no-repeat center center; /* Use the GIF as the background */
+      background-size: contain; /* Resize the image to fit within the button container */
+      border: none;
+      cursor: pointer;
+    }
+
+
+    #go-back-button:hover {
+      transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+
+    /* Style the sticker */
+    #sticker {
+      position: absolute; /* Position it absolutely */
+      top: 50%; /* Center it vertically */
+      left: 50%; /* Center it horizontally */
+      transform: translate(-50%, -50%); /* Adjust position to truly center */
+      width: 500px; /* Adjust width to fit better */
+      height: auto; /* Maintain aspect ratio */
+      z-index: 5; /* Ensure it appears below the Go Back button */
+      border: 5px solid #FFB6C1; /* Add a cute border around the sticker */
+      border-radius: 15px; /* Rounded corners for the border */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    #sticker img {
+      width: 100%; /* Make the image fill the container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Rounded corners for the image */
+    }
+
+    /* Style the text */
+    #text {
+        position: absolute; /* Position it absolutely */
+        top: 200px; /* Adjust position from the top */
+        left: 530px; /* Adjust position from the left */
+        right: 540px; /* Adjust position from the right */
+        padding: 20px; /* Add some padding */
+      font-family: 'CuteFont', 'Comic Sans MS', cursive, sans-serif; /* Use a cute font */
+      color: #333; /* Set text color */
+      font-size: 17px; /* Adjust font size */
+      z-index: 6; /* Ensure it appears above the sticker */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+      text-align: center; /* Center the text inside the div */
+    }
+
+    #text h1 {
+      font-size: 2em; /* Larger font size for the heading */
+      margin-bottom: 20px; /* Space below the heading */
+      color: #FF6F61; /* Cute color for the heading */
+    }
+
+    #text p {
+      line-height: 1.6; /* Improve readability */
+    }
+  </style>
+</head>
+<body>
+  <!-- Go Back Button -->
+  <button id="go-back-button"></button>
+
+  <!-- Text Description -->
+  <div id="text">
+    <h1>Why Sleep Is Important</h1>
+    <p>Sleep is a vital component of overall health and well-being, essential for physical, mental, and emotional restoration. During sleep, your body undergoes crucial processes like repairing tissues, building muscle, and synthesizing proteins. Adequate sleep also supports cognitive functions such as memory consolidation, problem-solving, and emotional regulation.</p>
+  </div>
+
+  <!-- Sticker -->
+  <div id="sticker">
+    <img src="img/sticker.png" alt="Sticker">
+  </div>
+
+  <script>
+    // Event listener for the "Go Back" button
+    document.getElementById('go-back-button').addEventListener('click', function() {
+      // Redirect back to the previous page (video.html)
+      window.location.href = 'video.html'; // Adjust this to your previous page's filename
+    });
+  </script>
+</body>
+</html>
