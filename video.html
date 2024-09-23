@@ -10,6 +10,10 @@
       background-color: #FFF1DB; /* Set background color */
       margin: 0; /* Remove default margin */
       font-family: Arial, sans-serif; /* Set a default font */
+      height: 100vh; /* Full height to help with centering */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     /* Style the video container */
@@ -18,7 +22,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      width: 100%;
+      max-width: 1200px; /* Limit the max width of the video container */
+      padding: 20px; /* Add padding around the container */
+      box-sizing: border-box;
     }
 
     /* Style the video frame */
@@ -28,22 +35,23 @@
       border-radius: 15px; /* Rounded corners */
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slight shadow for a soft look */
       background-color: #FFF; /* White background for the frame */
+      width: 100%; /* Ensure the frame doesn't overflow the screen */
+      max-width: 800px; /* Set max width for larger screens */
     }
 
     /* Adjust the width of the video */
     #bidyow-video {
-      width: 80%; /* Set the video to a fixed smaller width */
+      width: 100%; /* Set the video to occupy the full width of the frame */
       height: auto; /* Keep the height proportional to the width */
-      margin-left: 120px;
     }
 
     /* Style the Go Back button */
     #go-back-button {
       position: fixed; /* Ensure it's positioned correctly */
-      top: 60px; /* Adjust position from the top */
-      left: 30px; /* Adjust position from the left */
-      width: 100px; /* Increase width to make the button larger */
-      height: 60px; /* Increase height to make the button larger */
+      top: 20px; /* Adjust position from the top */
+      left: 20px; /* Adjust position from the left */
+      width: 60px; /* Adjust width for responsiveness */
+      height: 60px; /* Adjust height for responsiveness */
       background: transparent url('img/back.gif') no-repeat center center; /* Use the GIF as the background */
       background-size: contain; /* Resize the image to fit within the button container */
       border: none;
@@ -57,10 +65,10 @@
     /* Style the Next button */
     #next {
       position: fixed; /* Ensure it's positioned correctly */
-      top: 60px; /* Adjust position from the top */
-      right: 30px; /* Adjust position from the right */
-      width: 100px; /* Increase width to make the button larger */
-      height: 60px; /* Increase height to make the button larger */
+      top: 20px; /* Adjust position from the top */
+      right: 20px; /* Adjust position from the right */
+      width: 60px; /* Adjust width for responsiveness */
+      height: 60px; /* Adjust height for responsiveness */
       background: transparent url('img/next.png') no-repeat center center; /* Use the GIF as the background */
       background-size: contain; /* Resize the image to fit within the button container */
       border: none;
@@ -71,6 +79,34 @@
       transform: scale(1.1); /* Slightly enlarge the button on hover */
     }
 
+    /* Media Queries for larger screens */
+    @media (min-width: 768px) {
+      #go-back-button,
+      #next {
+        width: 80px; /* Adjust width for larger screens */
+        height: 80px; /* Adjust height for larger screens */
+      }
+
+      #video-container {
+        padding: 0 40px; /* Increase padding for larger screens */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #go-back-button,
+      #next {
+        width: 100px; /* Adjust width for larger screens */
+        height: 100px; /* Adjust height for larger screens */
+      }
+
+      #video-frame {
+        max-width: 1000px; /* Larger max width for very big screens */
+      }
+
+      #video-container {
+        padding: 0 60px; /* Increase padding for larger screens */
+      }
+    }
   </style>
 </head>
 <body>
